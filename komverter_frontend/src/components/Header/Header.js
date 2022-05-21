@@ -39,8 +39,9 @@ const Header = () => {
             <CottageIcon  sx={{ fontSize: 30 }} style={{color:'white'}}/>
           </IconButton>
           </Link>
+          
           <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
-            <b>Komverter</b>
+          <Link to='/' style={{ color: '#FFF' }}><b >Komverter</b></Link>
           </Typography>
           
           <RepositoryMetrics 

@@ -18,7 +18,7 @@
 }
 
 .title {
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: 600;
   max-height: 5rem;
   line-height: 1.2;
@@ -52,13 +52,13 @@
   overflow: hidden;
 
   .text {
-    font-size: 1.6rem;
+    font-size: 1rem;
   }
 }
 
 .text {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 
 .videoPreviewRow,
@@ -102,6 +102,7 @@
 }
 
 @media only screen and (max-width: 1024px) {
+
   // Row !
   .videoPreviewRow {
     .details {
@@ -128,6 +129,7 @@
 }
 
 @media only screen and (max-width: 320px) {
+
   // ROW!
   .videoPreviewRow {
     flex-flow: column;

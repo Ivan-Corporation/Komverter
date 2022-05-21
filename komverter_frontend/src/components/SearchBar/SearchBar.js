@@ -2,21 +2,37 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './SearchBar.module.scss';
-import IconButton from '../IconButton';
+import SearchIcon from '@mui/icons-material/Search';
+import IconButton from '@mui/material/IconButton';
+import { motion } from 'framer-motion/dist/framer-motion'
+
 
 const SearchBar = ({ searchTerm, onChange, onSubmit, className }) => {
   return (
+
     <form className={classNames(styles.searchBar, className)} onSubmit={onSubmit}>
       <input
         className={styles.searchInput}
         onChange={onChange}
         type="text"
         value={searchTerm}
-        placeholder="Search"
+        placeholder="Copy or search ✏️"
         required
       />
-      <IconButton type="submit" icon="search" color="secondary" />
+     
+      <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            style={{marginLeft:'1px'}}
+            type='submit'
+          >
+      <SearchIcon sx={{fontSize:'30px'}}/>
+      </IconButton>
+     
     </form>
+   
   );
 };
 
