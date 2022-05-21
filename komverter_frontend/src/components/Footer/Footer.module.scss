@@ -1,0 +1,14 @@
+@import '../../styles/variables';
+
+.footer {
+  color: $text-secondary;
+  background: $bg-secondary;
+  padding: 20px 0;
+}
+
+.footerContent {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,19 @@
+@import '../../styles/variables';
+
+.searchBar {
+  width: 100%;
+  display: flex;
+  border: 2px solid $bg-secondary;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.searchInput {
+  width: 100%;
+  align-self: stretch;
+  padding: 4px 8px;
+  color: $text-primary;
+  font-size: 1.6rem;
+  outline: none;
+  border: none;
+}

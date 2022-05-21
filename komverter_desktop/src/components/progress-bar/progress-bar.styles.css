@@ -1,0 +1,17 @@
+.progress-bar-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background: #19222a;
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  background: #ed6a5a;
+  transition: width 0.2s;
+}

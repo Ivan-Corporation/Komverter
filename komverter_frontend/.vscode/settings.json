@@ -1,0 +1,14 @@
+{
+  "eslint.workingDirectories": [
+    "./client"
+  ],
+  "cSpell.words": [
+    "Ccontent",
+    "Cstatistics",
+    "Embeddable",
+    "Linkify",
+    "fontawesome",
+    "highestaudio",
+    "ytdl"
+  ]
+}

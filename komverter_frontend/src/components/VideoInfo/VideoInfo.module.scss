@@ -1,0 +1,60 @@
+@import '../../styles/variables';
+
+.videoTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.videoStats {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 10px;
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.videoStatsPrimary,
+.videoStatsSecondary {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.videoStatsPrimary {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.icon {
+  margin-right: 10px;
+  opacity: 0.8;
+}
+
+.channelOwner {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 600px) {
+  .videoTitle {
+    font-size: 1.6rem;
+  }
+
+  .channelOwner {
+    font-size: 1.4rem;
+  }
+
+  .videoStatsPrimary {
+    flex: auto;
+  }
+}
