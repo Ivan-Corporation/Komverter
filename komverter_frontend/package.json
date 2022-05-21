@@ -9,6 +9,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.11",
+    "@mui/icons-material": "^5.8.0",
     "@mui/material": "^5.8.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -16,6 +17,7 @@
     "axios": "^0.21.1",
     "classnames": "^2.2.6",
     "file-saver": "^2.0.2",
+    "framer-motion": "^6.3.3",
     "prop-types": "^15.7.2",
     "query-string": "^5.1.1",
     "react": "^17.0.0",
@@ -25,6 +27,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.4",
     "react-toastify": "^7.0.4",
+    "repository-metrics": "^3.7.6",
     "sass": ""
   },
   "scripts": {
