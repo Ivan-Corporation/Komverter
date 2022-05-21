@@ -3,17 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.11",
+    "@mui/material": "^5.8.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.21.1",
     "classnames": "^2.2.6",
     "file-saver": "^2.0.2",
-    "sass": "",
     "prop-types": "^15.7.2",
     "query-string": "^5.1.1",
     "react": "^17.0.0",
@@ -22,7 +24,8 @@
     "react-linkify": "^1.0.0-alpha",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.4",
-    "react-toastify": "^7.0.4"
+    "react-toastify": "^7.0.4",
+    "sass": ""
   },
   "scripts": {
     "start": "react-scripts start",
@@ -46,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.14.0",
     "eslint-plugin-import": "^2.22.1",
@@ -53,7 +57,6 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "^2.1.2",
-    "eslint": "^6.6.0"
+    "prettier": "^2.1.2"
   }
 }
