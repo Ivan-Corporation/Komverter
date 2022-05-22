@@ -9,15 +9,16 @@ const PORT = process.env.PORT;
 
 
 
-const corsOptions = {
-  origin: 'https://komverter.vercel.app/',
-  credentials: true,            //access-control-allow-credentials:true
-  optionSuccessStatus: 200
-}
 
 
 // F
-app.use(cors(corsOptions));
+app.use(cors())
+
+
+
+app.get(`/download/:${downloadRouter}`, function (req, res, next) {
+  res.json({ msg: 'This is CORS-enabled for all origins!' })
+})
 
 
 app.use("/download", downloadRouter);
