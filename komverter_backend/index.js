@@ -13,6 +13,8 @@ const PORT = process.env.PORT;
 
 
 app.use("/download", downloadRouter);
+
+// F
 app.use(cors());
 
 
