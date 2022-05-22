@@ -10,4 +10,5 @@ ex:- git subtree push --prefix server heroku master
 <li><strike>Framer Motion</strike>
 <li><strike>Download page</strike>
 <li><strike>Deploy</strike>
+<li><strike>Stupid devDependencies problem</strike>
 </ul>
