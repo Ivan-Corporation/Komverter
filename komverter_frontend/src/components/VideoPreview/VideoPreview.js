@@ -29,7 +29,7 @@ const VideoPreview = ({
         <h2 className={styles.title}>{decodeHtmlEntities(title)}</h2>
         <div className={styles.meta}>
           <p className={styles.text}>
-          <strong>{channelTitle}</strong>
+            <strong>{channelTitle}</strong>
           </p>
           {views && (
             <p className={styles.text}>
@@ -37,7 +37,8 @@ const VideoPreview = ({
               &nbsp; views 👁
             </p>
           )}
-          <p className={styles.text}>{formatDate(publishedAt)}</p> 
+          
+          <p className={styles.text}>{formatDate(publishedAt)}</p>
         </div>
         {description && (
           <div className={styles.description}>

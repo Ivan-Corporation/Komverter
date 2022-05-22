@@ -27,7 +27,7 @@ const MainLayout = ({ children, searchTerm, onSubmit, onChange }) => {
       <section className={styles.mainContent}>
         <Container>{children}</Container>
       </section>
-      <Footer />
+      {/* <Footer /> */}
       <ToastContainer
         position="bottom-right"
         autoClose={false}

@@ -6,6 +6,9 @@ import VideoInfo from '../VideoInfo';
 import VideoDescription from '../VideoDescription';
 import VideoList from '../VideoList';
 import Button from '../Button';
+import { motion } from 'framer-motion/dist/framer-motion'
+
+
 
 const VideoContent = ({
   videoId,
@@ -15,7 +18,6 @@ const VideoContent = ({
   publishedAt,
   viewCount,
   likeCount,
-  dislikeCount,
   commentCount,
   description,
   relatedVideos,
@@ -25,12 +27,31 @@ const VideoContent = ({
   return (
     <section className={styles.videoContent}>
       <main className={styles.mainContent}>
+      <motion.div
+                initial={{ opacity: 0, x: -280 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                    ease: "easeInOut",
+                    duration: 1.3,
+                    delay: 0.3,
+                }}
+                >
         <VideoPlayer
           videoId={videoId}
           videoTitle={videoTitle}
           autoPlay={autoPlay}
           className={styles.marginBottom}
         />
+        </motion.div>
+        <motion.div
+                initial={{ opacity: 0, x: -280 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                    ease: "easeInOut",
+                    duration: 1.1,
+                    delay: 0.6,
+                }}
+                >
         <Button
           type="button"
           onClick={onDownload}
@@ -40,31 +61,54 @@ const VideoContent = ({
           className={styles.marginBottom}
         >
           Download Mp3
-        </Button>
+        </Button> 
+        </motion.div>
+        <motion.div
+                initial={{ opacity: 0, x: -280 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                    ease: "easeInOut",
+                    duration: 1.1,
+                    delay: 0.7,
+                }}
+                >
         <VideoInfo
           videoTitle={videoTitle}
           channelTitle={channelTitle}
           publishedAt={publishedAt}
           viewCount={viewCount}
           likeCount={likeCount}
-          dislikeCount={dislikeCount}
+          
           commentCount={commentCount}
           className={description ? styles.marginBottom : ''}
         />
         {description && (
           <VideoDescription description={description} className={styles.marginBottom} />
         )}
+        </motion.div>
       </main>
+      
       <aside className={styles.relatedVideos}>
+      <motion.div
+                initial={{ opacity: 0, x: 280 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                    ease: "easeInOut",
+                    duration: 1.1,
+                    delay: 0.7,
+                }}
+                >
         {relatedVideos && relatedVideos.length && (
           <VideoList
             videos={relatedVideos}
-            title="Related Videos"
+            title="Related Videos: 🔥"
             showDescription={false}
-            showViews={false}
+            showViews={true}
           />
         )}
+         </motion.div>
       </aside>
+     
     </section>
   );
 };

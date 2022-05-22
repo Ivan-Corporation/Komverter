@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './Loader.module.scss';
+import loader from '../../images/cat.gif'
 
 const Loader = ({ position, size }) => (
   <span className={styles[position]}>
-    <FontAwesomeIcon icon="spinner" size={size === 'small' ? 'lg' : '2x'} spin />
+    <img src={loader} style={{marginTop:'20px'}} alt='cat'/>
   </span>
 );
 

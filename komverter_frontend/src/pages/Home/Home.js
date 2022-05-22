@@ -11,12 +11,46 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import Container from '@mui/material/Container'
 import { motion } from 'framer-motion/dist/framer-motion'
+import usa from '../../images/united-states.png'
+import france from '../../images/france.png'
+import russia from '../../images/russia.png'
+import germany from '../../images/germany.png'
+import uk from '../../images/uk.png'
+import ukraine from '../../images/ukraine.png'
+import italy from '../../images/italy.png'
+import spain from '../../images/spain.png'
+
+
 
 
 const Home = () => {
+  const saved = localStorage.getItem("regionCode");
+
+  const initialValue = JSON.parse(saved) || 'US';
+
+  const [regionCode, setRegionCode] = useState(initialValue || 'US')
+
+
   
+
+  localStorage.setItem("regionCode", JSON.stringify(regionCode));
   
-  const [regionCode, setRegionCode] = useState('RU')
+
+  const handleChange = (event) => {
+    setRegionCode(event.target.value);
+    window.location.reload(true);
+  };
+
+  const controlProps = (item) => ({
+    checked: regionCode === item,
+    onChange: handleChange,
+    value: item,
+    name: 'color-radio-button-demo',
+    inputProps: { 'aria-label': item },
+    
+  });
+
+
 
   function getPopularVideos (videoCategoryId = 10, pageToken = '', maxResults = 20) {
 
@@ -44,6 +78,10 @@ const Home = () => {
 
   if (isLoading) return <Loader position="center" />;
 
+
+  
+
+
   return (
     <main>
        <motion.div
@@ -57,21 +95,28 @@ const Home = () => {
                 >
       <Container align='center'>
       <FormControl>
-      <FormLabel id="demo-row-radio-buttons-group-label">Choose your region 🏳️</FormLabel>
+      <FormLabel id="demo-row-radio-buttons-group-label">Choose your region: 🏳️</FormLabel>
       <RadioGroup
         row
         aria-labelledby="demo-row-radio-buttons-group-label"
         name="row-radio-buttons-group"
       >
-        <FormControlLabel value="female" control={<Radio />} label="Female" />
-        <FormControlLabel value="male" control={<Radio />} label="Male" />
-        <FormControlLabel value="other" control={<Radio />} label="Other" />
-        <FormControlLabel
-          value="disabled"
-          disabled
-          control={<Radio />}
-          label="other"
-        />
+                <Radio {...controlProps('US')} /> 
+                <img src={usa} style={{width:'40px'}}/>
+                <Radio {...controlProps('GB')} />
+                <img src={uk} style={{width:'40px'}}/>
+                <Radio {...controlProps('RU')}  />
+                <img src={russia} style={{width:'40px'}}/>
+                <Radio {...controlProps('DE')}  />
+                <img src={germany} style={{width:'40px'}}/>
+                <Radio {...controlProps('UA')}  />
+                <img src={ukraine} style={{width:'40px'}}/>
+                <Radio {...controlProps('FR')}  />
+                <img src={france} style={{width:'40px'}}/>
+                <Radio {...controlProps('IT')}  />
+                <img src={italy} style={{width:'40px'}}/>
+                <Radio {...controlProps('ES')}  />
+                <img src={spain} style={{width:'40px'}}/>
       </RadioGroup>
     </FormControl>
     </Container>

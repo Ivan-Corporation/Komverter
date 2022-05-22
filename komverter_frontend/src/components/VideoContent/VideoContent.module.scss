@@ -1,6 +1,7 @@
 .videoContent {
   display: flex;
   flex-flow: row wrap;
+  font-size: 1rem;
 
   .marginBottom {
     margin-bottom: 20px;
@@ -9,6 +10,7 @@
 
 .mainContent {
   flex: 70%;
+
 }
 
 .relatedVideos {

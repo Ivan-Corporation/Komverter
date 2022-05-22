@@ -8,8 +8,37 @@ import downloadMp3 from '../../apis/backend/backend';
 import VideoContent from '../../components/VideoContent';
 import Loader from '../../components/Loader';
 import ErrorMessage from '../../components/ErrorMessage';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import Slide from '@mui/material/Slide';
+import { TransitionProps } from '@mui/material/transitions';
+import Button from '@mui/material/Button';
+import loader from '../../images/cat.gif'
+import { Container } from '@mui/system';
+import DownloadIcon from '@mui/icons-material/Download';
+import LinearProgress from '@mui/material/LinearProgress';
+
+
+
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
+
+
 
 const Download = () => {
+
+  const [open, setOpen] = React.useState(false);
+
+const handleClose = () => {
+  setOpen(false);
+};
+
+
   const { videoId } = useParams();
 
   const {
@@ -37,6 +66,7 @@ const Download = () => {
   const handleDownload = async () => {
     setIsDownloadDisabled(true);
     const toastId = toast.info(`Downloading ${videoDetails.items[0].title}`);
+    setOpen(true);
     try {
       const { data, headers } = await downloadMp3(videoId);
       const filename = headers['content-disposition'].split('=')[1].replace(/"/gi, '').trim();
@@ -101,6 +131,7 @@ const Download = () => {
   } = videoDetails.items[0];
 
   return (
+    <React.Fragment>
     <VideoContent
       videoId={id}
       autoPlay
@@ -126,6 +157,30 @@ const Download = () => {
       onDownload={handleDownload}
       isDownloadDisabled={isDownloadDisabled}
     />
+    <Dialog
+        open={open}
+        TransitionComponent={Transition}
+        keepMounted
+        onClose={handleClose}
+        aria-describedby="alert-dialog-slide-description"
+      >
+        <DialogTitle>{"Video is converting... Just wait a minute..."}</DialogTitle>
+        <DialogContent> <LinearProgress />
+        <Container align='center'>
+        
+          <img src={loader} style={{marginTop:'20px', marginBottom:'20px'}}/>
+
+         
+
+          </Container>
+        </DialogContent>
+        <DialogActions>
+        <Container align='center'>
+          <Button color="success" onClick={handleClose} variant="contained" endIcon={<DownloadIcon />}>Understandable</Button>
+          </Container>
+        </DialogActions>
+      </Dialog>
+      </React.Fragment>
   );
 };
 

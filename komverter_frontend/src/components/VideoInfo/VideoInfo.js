@@ -35,10 +35,7 @@ const VideoInfo = ({
             <FontAwesomeIcon icon="thumbs-up" className={styles.icon} />
             {formatNumber(likeCount)}
           </span>
-          <span>
-            <FontAwesomeIcon icon="thumbs-down" className={styles.icon} />
-            {formatNumber(dislikeCount)}
-          </span>
+          
           <span>
             <FontAwesomeIcon icon="comment" className={styles.icon} />
             {formatNumber(commentCount)}
