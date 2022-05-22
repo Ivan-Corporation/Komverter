@@ -7,12 +7,14 @@ const app = express();
 const PORT = process.env.PORT;
 // const PORT = process.env.PORT || 4000;
 
-app.use(cors());
-
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  next();
-});
+app.use(
+  cors({
+    origin: ['https://komverter.vercel.app'],
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept'],
+  })
+);
 
 
 
