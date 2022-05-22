@@ -6,8 +6,8 @@ ex:- git subtree push --prefix server heroku master
 
 
 <ul>
-<li>ControlProps regionCode without state library
+<li><strike>ControlProps regionCode without state library</strike>
 <li><strike>Framer Motion</strike>
-<li>Download page
-<li>
+<li><strike>Download page</strike>
+<li><strike>Deploy</strike>
 </ul>
