@@ -10,6 +10,7 @@ import ProgressBar from './progress-bar/progress-bar.component.jsx'
 
 // Assets
 import DownloadIcon from '../assets/download-icon.png'
+import youtube from '../assets/youtube.png'
 
 // Styles
 import './app.css'
@@ -19,7 +20,7 @@ const App = () => {
   const [url, setUrl] = useState('')
   const [format, setFormat] = useState('mp3')
   const [downloadPercentage, setDownloadPercentage] = useState(0)
-  const [displayMessage, setDisplayMessage] = useState('Ready')
+  const [displayMessage, setDisplayMessage] = useState('📎 Ready')
 
   // Refs
   const buttonRef = useRef()
@@ -69,7 +70,7 @@ const App = () => {
       buttonRef.current.disabled = false
 
       setTimeout(() => {
-        setDisplayMessage('Ready')
+        setDisplayMessage('📎 Ready')
       }, 2000)
     })
 
@@ -86,7 +87,8 @@ const App = () => {
         <div className="display">
           <p>{displayMessage}</p>
         </div>
-
+        <img src={youtube} />
+        <h4 style={{ marginBottom: '10px' }}>Paste Youtube video link here:</h4>
         <form className="form">
           <input
             type="text"
@@ -100,8 +102,8 @@ const App = () => {
               setFormat(e.target.value)
             }}
           >
-            <option>mp3</option>
-            <option>mp4</option>
+            <option >mp3 🎸</option>
+            <option>mp4 🎻</option>
           </select>
           <button
             ref={buttonRef}
@@ -113,7 +115,7 @@ const App = () => {
             ) : (
               <Fragment>
                 {' '}
-                <img src={DownloadIcon} alt="download icon" /> Download
+                <img src={DownloadIcon} alt="download icon" style={{ marginRight: '8px' }} />  Download
               </Fragment>
             )}
           </button>

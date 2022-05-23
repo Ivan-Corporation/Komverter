@@ -2,14 +2,15 @@ body {
   background-color: transparent;
   color: #eee;
   text-align: center;
-  padding: 15px;
   font-family: sans-serif;
+  height: 100%;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 .app-wrapper {
@@ -30,15 +31,16 @@ body {
   border-radius: 3px;
 }
 
-.form > input {
+.form>input {
   flex: 1;
   border: none;
-  font-size: 16px;
+  font-size: 18px;
   color: #333;
   background: #f3f3f3;
+  font-weight: 500;
 }
 
-.form > select {
+.form>select {
   border: none;
   outline: none;
   background: #f3f3f3;
@@ -46,10 +48,11 @@ body {
   font-size: 16px;
   color: #888;
   margin-right: 5px;
+
 }
 
-.form > button {
-  background: #ed6a5a;
+.form>button {
+  background: rgb(255, 159, 42);
   border: none;
   color: #eee;
   font-weight: bold;
@@ -59,37 +62,48 @@ body {
   align-items: center;
 }
 
-.form > button:disabled {
+.form>button:disabled {
   filter: grayscale(50%);
   cursor: progress;
 }
 
-.form > button img {
+.form>button img {
   filter: invert(1);
   margin-right: 5px;
   height: 18px;
   width: 18px;
 }
 
-.form > input,
-.form > button {
+.form>input,
+.form>button {
   padding: 20px;
   outline: none;
+
 }
 
 .display {
-  font-size: 14px;
+  font-size: 18px;
+  font-weight: 550;
+
   background: rgba(255, 255, 255, 0.025);
   margin-bottom: 25px;
   border-radius: 3px;
-  height: 40px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
-.display > p {
+.display>p {
   padding: 5px;
   position: relative;
   color: #888;
+
+
+}
+
+.download-btn:hover {
+  background-color: #ff6600;
+  cursor: pointer;
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 // Electron
 const { remote } = window.require('electron')
 
@@ -15,18 +16,15 @@ const TitleBar = () => {
     remote.getCurrentWindow().minimize()
   }
 
-  const maximizeWindow = () => {
-    remote.getCurrentWindow().maximize()
-  }
+
 
   return (
     <header className="title-bar">
       <div className="controls">
-        <button className="close" onClick={closeWindow}></button>
-        <button className="min" onClick={minimizeWindow}></button>
-        <button className="max" onClick={maximizeWindow}></button>
+        <button className="close" onClick={closeWindow}>✖️</button>
+        <button className="min" onClick={minimizeWindow}>➖</button>
       </div>
-      <p className="title">YouTube Downloader</p>
+      <p className="title">Komverter</p>
     </header>
   )
 }

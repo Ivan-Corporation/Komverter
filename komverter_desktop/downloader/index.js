@@ -38,7 +38,7 @@ class Downloader extends EventEmitter {
     if (!isValid) {
       // We use nextTick so the .on() calls can be async
       process.nextTick(() => {
-        this.emit('error', new Error('Invalid URL'))
+        this.emit('error', new Error('Invalid URL 🤡'))
         this.removeAllListeners()
       })
     }
@@ -83,7 +83,7 @@ class Downloader extends EventEmitter {
   =============================================== */
 
   handleError = () => {
-    this.emit('error', new Error("Can't process video."))
+    this.emit('error', new Error("Can't process video. Try again 📥"))
     this.removeAllListeners()
   }
 

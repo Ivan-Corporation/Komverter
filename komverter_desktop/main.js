@@ -41,7 +41,7 @@ let win
 const createWindow = () => {
   win = new BrowserWindow({
     width: 800,
-    height: 290,
+    height: 460,
     icon: path.join(__dirname, 'icon.ico'),
     transparent: true,
     frame: false,

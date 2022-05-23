@@ -1,4 +1,7 @@
 # Komverter
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+![NPM](https://img.shields.io/npm/l/repository-metrics)
+![GitHub stars](https://img.shields.io/github/stars/Ivan-Corporation/Komverter?style=social)
 
 ![image](https://user-images.githubusercontent.com/58357980/169748090-dc418a4a-e61c-4253-bd5e-5a17bbf35546.png)
 
@@ -22,4 +25,6 @@ $ heroku buildpacks:add https://github.com/jonathanong/heroku-buildpack-ffmpeg-l
 <li><strike>Download page</strike>
 <li><strike>Deploy</strike>
 <li><strike>Stupid devDependencies problem</strike>
+<li><strike>Ffmpeg problem</strike>
+<li>dialog link into desktop app
 </ul>

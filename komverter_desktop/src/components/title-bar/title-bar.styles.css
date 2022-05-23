@@ -8,8 +8,9 @@
 }
 
 .title {
-  font-size: 12px;
-  color: #7b7b7b;
+  font-size: 16px;
+
+  color: #919191;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -21,11 +22,11 @@
 }
 
 .controls button {
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
+  height: 18.5px;
+  width: 18px;
+  border-radius: 30%;
   border: none;
-  margin-right: 8px;
+  margin-right: 4px;
   outline: none;
 }
 
@@ -37,6 +38,12 @@
   background: #ffbd44;
 }
 
-.max {
-  background: #00ca4e;
+.close:hover {
+  background: #ff120e;
+  cursor: pointer;
+}
+
+.min:hover {
+  background: #ffa600;
+  cursor: pointer;
 }
