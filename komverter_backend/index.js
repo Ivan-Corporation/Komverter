@@ -5,16 +5,10 @@ const downloadRouter = require("./routes/download");
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-// cors problem
-const corsOptions = {
-  origin: 'https://komverter.vercel.app/',
-  credentials: true,            //access-control-allow-credentials:true
-  optionSuccessStatus: 200
-}
 
 
 // F
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.use("/download", downloadRouter);
 
