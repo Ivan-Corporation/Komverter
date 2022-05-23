@@ -19,7 +19,6 @@ downloadRouter.get("/:videoId", async (req, res, next) => {
     res.set({
       "Content-Disposition": `attachment; filename="${fileName}.mp3"`,
       "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Credentials": "true",
       "Access-Control-Expose-Headers": "Content-Disposition",
       "Content-Type": "audio/mpeg",
     });
