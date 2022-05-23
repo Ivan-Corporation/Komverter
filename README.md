@@ -7,6 +7,9 @@ ex:- git subtree push --prefix server heroku master
 
 ### Buildpack for heroku ffmpeg
 https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest
+or
+$ heroku buildpacks:add https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git
+
 
 <ul>
 <li><strike>ControlProps regionCode without state library</strike>
