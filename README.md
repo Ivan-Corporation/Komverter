@@ -33,5 +33,5 @@ $ heroku buildpacks:add https://github.com/jonathanong/heroku-buildpack-ffmpeg-l
 <li><strike>Deploy</strike>
 <li><strike>Stupid devDependencies problem</strike>
 <li><strike>Ffmpeg problem</strike>
-<li>dialog link into desktop app
+<li><strike>dialog link into desktop app</strike>
 </ul>

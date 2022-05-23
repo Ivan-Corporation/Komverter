@@ -20,6 +20,7 @@ import loader from '../../images/cat.gif'
 import { Container } from '@mui/system';
 import DownloadIcon from '@mui/icons-material/Download';
 import LinearProgress from '@mui/material/LinearProgress';
+import  Typography from '@mui/material/Typography';
 
 
 
@@ -177,6 +178,8 @@ const handleClose = () => {
         <DialogActions>
         <Container align='center'>
           <Button color="success" onClick={handleClose} variant="contained" endIcon={<DownloadIcon />}>Understandable</Button>
+          
+          <Typography variant='subtitle1' style={{marginTop:'20px', marginBottom:'20px'}}><u><a href='https://github.com/Ivan-Corporation/Komverter/releases/tag/v1.0.0'>If downloading always fail (Youtube API), try desktop version (mp4 support)</a></u></Typography>
           </Container>
         </DialogActions>
       </Dialog>
