@@ -5,6 +5,7 @@ const downloadRouter = require("./routes/download");
 const app = express();
 const PORT = process.env.PORT || 4000;
 
+// cors problem
 app.use(cors());
 
 app.use("/download", downloadRouter);
