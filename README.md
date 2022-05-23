@@ -6,7 +6,7 @@ ex:- git subtree push --prefix server heroku master
 
 
 ### Buildpack for heroku ffmpeg
-https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest
+https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest (WITH INDEX-1!)
 or
 $ heroku buildpacks:add https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git
 
