@@ -15,11 +15,11 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const history = useHistory();
 
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     setSearchTerm(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:any) => {
     e.preventDefault();
     if (searchTerm) {
       const encodedTerm = encodeURIComponent(searchTerm).replace(/%20/gi, '+');
